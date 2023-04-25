@@ -23,8 +23,6 @@ function App() {
     document.addEventListener('scroll', onScroll)
   }, [isContentOpen])
 
-
-
   const Title = css`
     padding: 100%;  
   `
@@ -46,9 +44,13 @@ function App() {
 
         <div id="Wrapper" css={css`
           position: absolute;
-          top: 0px;
-          right: 0px;
+          background-color: #ffffffa0;
+          top: 30vh;
+          left: 0;
+          right: 0;
           margin: auto;
+          margin-left: 10px;
+          margin-right: 10px;
         `}>
         </div>
       </div>

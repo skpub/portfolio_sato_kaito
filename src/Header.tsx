@@ -6,7 +6,7 @@ import { FaGithub, FaTwitter, FaFacebook } from 'react-icons/fa'
 export default class Header extends React.Component {
   render() {
     return (
-      <div css={css`
+      <><div css={css`
         display: flex;
         position: absolute;
         top: 0px;
@@ -37,7 +37,7 @@ export default class Header extends React.Component {
             color: #303045;
           }
         `}>
-          <a href="https://github.com/skpub" css={css`
+          <a href="https://github.com/skpub" target="_blank" css={css`
             display: block;
             margin-right: auto;
             margin-left: auto;
@@ -47,7 +47,7 @@ export default class Header extends React.Component {
               padding: 10px;
             `} />
           </a>
-          <a href="https://twitter.com/OMGR_dearinsu" css={css`
+          <a href="https://twitter.com/OMGR_dearinsu" target="_blank" css={css`
             display: block;
             margin-right: auto;
             margin-left: auto;
@@ -57,8 +57,7 @@ export default class Header extends React.Component {
               padding: 10px;
             `} />
           </a>
-          <a href="https://www.facebook.com/profile.php?id=100085236288723" css={
-            css`display: block;
+          <a href="https://www.facebook.com/profile.php?id=100085236288723" target="_blank" css={css`display: block;
             margin-right: auto;
             margin-left: auto;
           `}>
@@ -69,6 +68,24 @@ export default class Header extends React.Component {
           </a>
         </div>
       </div>
+        <div css={css`
+        position: absolute; 
+        display: flex;
+        align-items: center;
+        height: 20vh;
+        width: 100vw;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -45%);
+        background-color: #ffffffa0;
+      `}>
+          <h1 css={css`
+          margin: auto;
+          color: #303045;
+          font-family: 'Shippori Mincho', serif;
+        `}>さんぷる。</h1>
+        </div>
+      </>
     )
   }
 }
