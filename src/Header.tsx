@@ -17,13 +17,17 @@ export default class Header extends React.Component {
         width: 100vw;
       `}>
         <div id="Header-left" css={css`
-          padding-left: 10px;
           font-family: 'Shippori Mincho', serif;
-          font-size: 24px;
-          padding: 0;
           p {
-            margin: 0;
-            padding-left: 10px;
+          font-size: 24px;
+            margin: 10px;
+            padding-left: 30px;
+          }
+          @media screen and (max-width: 520px) {
+            p {
+              padding-left: 15px;
+              font-size: 4vw;
+            }
           }
         `}>
           <p>Portfolio</p>
@@ -32,46 +36,43 @@ export default class Header extends React.Component {
           display: flex;
           width: 200px;
           margin: 0 0 0 auto;
-          font-size: 18px;
+          font-size: 24px;
           a {
+            margin: auto;
+            * {
+              padding: 0;
+              margin: 0;
+            }
             color: #303045;
+          }
+          @media screen and (max-width: 520px) {
+            width: 36vw;
+            a {
+              font-size: 4vw;
+            }
           }
         `}>
           <a href="https://github.com/skpub" target="_blank" css={css`
-            display: block;
-            margin-right: auto;
-            margin-left: auto;
           `}>
             <FaGithub css={css`
-              /* color: #171515; */
-              padding: 10px;
             `} />
           </a>
           <a href="https://twitter.com/OMGR_dearinsu" target="_blank" css={css`
-            display: block;
-            margin-right: auto;
-            margin-left: auto;
           `}>
             <FaTwitter css={css`
-              /* color: #1da1f2; */
-              padding: 10px;
             `} />
           </a>
           <a href="https://www.facebook.com/profile.php?id=100085236288723" target="_blank" css={css`display: block;
-            margin-right: auto;
-            margin-left: auto;
           `}>
             <FaFacebook css={css`
-              /* color: #3B5998; */
-              padding: 10px;
             `} />
           </a>
         </div>
       </div>
-        <div css={css`
+      <div css={css`
         position: absolute; 
         display: flex;
-        align-items: center;
+        flex-flow: column;
         height: 20vh;
         width: 100vw;
         top: 50vh;
@@ -79,11 +80,26 @@ export default class Header extends React.Component {
         transform: translate(-50%, -45%);
         background-color: #ffffffa0;
       `}>
-          <h1 css={css`
-          margin: auto;
+        <h1 css={css`
+          font-size: 48px;
+          letter-spacing: 0.5em;
+          margin: auto auto 0 auto;
+          padding: 10px;
           color: #303045;
           font-family: 'Shippori Mincho', serif;
-        `}>さんぷる。</h1>
+          @media screen and (max-width: 520px) {
+            font-size: 32px;
+          }
+        `}>佐藤 海音</h1>
+        <p css={css`
+          margin: 0 auto auto auto;
+          padding: 10px;
+          font-size: 24px;
+          letter-spacing: 0.5em;
+          @media screen and (max-width: 520px) {
+            font-size: 18px;
+          }
+        `}>SATO KAITO</p>
         </div>
       </>
     )

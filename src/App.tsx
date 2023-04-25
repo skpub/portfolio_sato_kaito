@@ -37,7 +37,8 @@ function App() {
       `}>
         <img css={css`
           width: 100vw;
-          filter: brightness(130%);
+          /* filter: brightness(130%); */
+          filter: sepia(20%);
         `} src={kaito} alt="" />
 
         <Header />
