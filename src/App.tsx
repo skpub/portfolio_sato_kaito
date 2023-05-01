@@ -37,15 +37,17 @@ function App() {
         <img css={css`
           width: 100vw;
           height: 100vh;
-          object-fit: cover;
           /* filter: brightness(130%); */
           filter: sepia(20%);
+
           background-attachment: fixed;
-          object-position: 0px -${scrollPoint/2}px;
+          object-fit: cover;
+          object-position: 0px -${(window.innerWidth*2-window.innerHeight)*(scrollPoint/window.innerHeight)}px;
+
         `} src={kaito} alt="" />
 
         <div css={closeHeader}>
-          <Header scrollPoint={scrollPoint} />
+          <Header scrollPoint={document.documentElement.clientHeight} />
         </div>
 
         <div id="Wrapper" css={css`
