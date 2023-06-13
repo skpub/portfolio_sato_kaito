@@ -32,7 +32,7 @@ const Header = () => {
           }
         }
       `}>
-        <p>Sato Kaito</p>
+        <p>佐藤 海音 / Sato Kaito</p>
       </div>
       <div id="Header-right" css={css`
         display: flex;
