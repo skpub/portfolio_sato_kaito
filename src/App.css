@@ -1,4 +1,6 @@
 #root {
+  --mybeige: #ffeabf;
+  --blueblack: #303045;
   margin: 0 auto;
   text-align: center;
 }

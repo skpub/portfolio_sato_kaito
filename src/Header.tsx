@@ -4,11 +4,7 @@ import { css } from '@emotion/react'
 import { FaGithub, FaTwitter, FaFacebook } from 'react-icons/fa'
 import { getAge, Birthday } from './birthday.ts'
 
-type Props = {
-  scrollPoint: number
-}
-
-const Header = (props: Props) => {
+const Header = () => {
   return (
     <><div css={css`
       display: flex;
@@ -17,7 +13,7 @@ const Header = (props: Props) => {
       position: fixed;
       top: 0px;
       right: 0px;
-      color: #303f5a;
+      color: var(--blueblack);
       flex-wrap: wrap;
       justify-content: flex-start;
       width: 100vw;
@@ -36,7 +32,7 @@ const Header = (props: Props) => {
           }
         }
       `}>
-        <p>Portfolio</p>
+        <p>Sato Kaito</p>
       </div>
       <div id="Header-right" css={css`
         display: flex;
@@ -49,7 +45,7 @@ const Header = (props: Props) => {
             padding: 0;
             margin: 0;
           }
-          color: #303a5a;
+          color: var(--blueblack);
         }
         @media screen and (max-width: 520px) {
           width: 36vw;
