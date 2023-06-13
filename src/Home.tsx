@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { useState, useEffect, useCallback } from 'react'
 import { css } from '@emotion/react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './App.css'
 import Header from './Header'
 import kaito from '/img/stand.png'
@@ -22,11 +22,13 @@ export const Home = () => {
     addEventListener('scroll', handleScrolling)
   }, [handleScrolling])
 
-  const closeHeader = css``;
+  const closeHeader = css``
 
   const Title = css`
     padding: 100%;  
   `
+
+  const navigate = useNavigate()
 
   return (
     <>
@@ -35,7 +37,7 @@ export const Home = () => {
         /* background: url({kaito}) no-repeat; */
         /* background-size: cover; */
         background-attachment: fixed;
-        background: linear-gradient(0deg, var(--blueblack), 10%, var(--mybeige));
+        /* background: linear-gradient(0deg, var(--blueblack), 2%, var(--mybeige)); */
       `}>
         <img css={css`
           width: 100vw;
@@ -58,13 +60,19 @@ export const Home = () => {
         <div id="Wrapper" css={css`
           position: absolute;
           top: 100vh;
-          height: 100vh;
           left: 0;
           right: 0;
           margin: 0;
-          margin-left: 10px;
-          margin-right: 10px;
+          /* margin-left: 10px;
+          margin-right: 10px; */
         `}>
+          <h1 css={css`
+            padding: 24px;
+            margin: 0;
+            color: var(--mybeige);
+            background: var(--blueblack);
+            font-family: 'Zen Maru Gothic';
+          `}>Content</h1>
           <ul css={css`
             margin-top: 48px;
             margin-left: 10px;
@@ -72,6 +80,8 @@ export const Home = () => {
             padding: 0;
             list-style: none;
             display: flex;
+            font-family: 'Zen Maru Gothic', serif;
+            color: var(--blueblack);
             @media screen and (max-width: 700px) {
               flex-flow: column;
             }
@@ -80,29 +90,25 @@ export const Home = () => {
               flex: 1;
               margin: 10px;
             `}>
-              <img css={css`
+              <img onClick={() => navigate('achivement')} css={css`
                 &:hover {
                   opacity: 80%;
                 }  
                 width: 100%;
               `} src={tongking} alt="" />
-              <Link to="/achivement">
-                <p>成果物</p>
-              </Link>
+              <h2>成果物</h2>
             </li>
             <li css={css`
               flex: 1;
               margin: 10px;
             `}>
-              <img css={css`
+              <img onClick={() => navigate('career')}css={css`
                 &:hover {
                   opacity: 80%;
                 }  
                 width: 100%;
               `} src={keireki} alt="" />
-              <Link to="/career">
-                <p>経歴・資格</p>
-              </Link>
+              <h2>経歴・資格</h2>
             </li>
           </ul>
         </div>

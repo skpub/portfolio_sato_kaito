@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -26,7 +28,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  padding: 0;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
