@@ -4,6 +4,7 @@ import { css } from '@emotion/react'
 import './App.css'
 import Header from './Header'
 import kaito from '/img/stand.png'
+import tongking from '/img/TONGKING2.png'
 
 function App() {
   const [scrollPoint, setScrollPoint] = useState<number>(0)
@@ -29,7 +30,7 @@ function App() {
   return (
     <>
       <div id="BackGround" css={css`
-        position: relative;
+        /* position: relative; */
         /* background: url({kaito}) no-repeat; */
         /* background-size: cover; */
         background-attachment: fixed;
@@ -42,17 +43,18 @@ function App() {
 
           background-attachment: fixed;
           object-fit: cover;
+          @media screen and (max-width: 700px) {
+            object-position: 0px 0px;
+          }
           object-position: 0px -${(window.innerWidth*2-window.innerHeight)*(scrollPoint/window.innerHeight)}px;
-
         `} src={kaito} alt="" />
 
         <div css={closeHeader}>
-          <Header scrollPoint={document.documentElement.clientHeight} />
+          <Header scrollPoint={document.documentElement.clientWidth} />
         </div>
 
         <div id="Wrapper" css={css`
           position: absolute;
-          background-color: #303a5a;
           top: 100vh;
           height: 100vh;
           left: 0;
@@ -61,6 +63,9 @@ function App() {
           margin-left: 10px;
           margin-right: 10px;
         `}>
+          <img css={css`
+            width: 100%;
+          `}src={tongking} alt="" />
         </div>
       </div>
     </>
