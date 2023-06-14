@@ -13,17 +13,19 @@ export const AchivementContent = (props: Commit) => {
     <div css={css`
         color: var(--blueblack);
     `}>
-      <h1 css={css`
-      font-family: 'Zen Maru Gothic';
-        margin: 0;
-        padding-top: 24px;
-      `}>成果物</h1>
       <div css={css`
         display: flex;
-        margin: 24px;
+        padding: 24px;
+        @media screen and (max-width: 520px) {
+          flex-flow: column;
+        }
       `}>
         <div css={css`
           flex: 1;
+          @media screen and (max-width: 520px) {
+            margin: 24px;
+            margin-bottom: 0px;
+          }
         `}>
           <a href={props.gh_link}>
             <img css={css`
@@ -39,11 +41,13 @@ export const AchivementContent = (props: Commit) => {
         <div css={css`
           flex: 2;
         `}>
-          <h1 css={css`
+          <h2 css={css`
+            margin: 0;
             font-family: 'Zen Maru Gothic';
-          `}>{props.title}</h1>
+          `}>{props.title}</h2>
           <p css={css`
-            margin: 24px;
+            margin-left: 24px;
+            margin-right: 24px;
             font-family: 'Shippori Mincho';
           `}>{props.description}</p>
         </div>
