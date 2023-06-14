@@ -1,9 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { useState, useEffect, useCallback } from 'react'
 import { css } from '@emotion/react'
-import { Link, useNavigate } from 'react-router-dom'
+import { ScrollRestoration, useNavigate } from 'react-router-dom'
 import './App.css'
 import Header from './Header'
+import { Content, ContentProps } from './Content'
 import kaito from '/img/stand.png'
 import tongking from '/img/TONGKING2.png'
 import keireki from '/img/keireki2.jpg'
@@ -30,12 +31,25 @@ export const Home = () => {
 
   const navigate = useNavigate()
 
+  const achivement: ContentProps = {
+    title: "成果物",
+    img: tongking,
+    link: "/achivement"
+  }
+
+  const career: ContentProps = {
+    title: "経歴・資格",
+    img: keireki,
+    link: "/career"
+  }
+
   return (
     <>
       <div id="BackGround" css={css`
         /* position: relative; */
         /* background: url({kaito}) no-repeat; */
         /* background-size: cover; */
+        background: var(--mybeige);
         background-attachment: fixed;
         /* background: linear-gradient(0deg, var(--blueblack), 2%, var(--mybeige)); */
       `}>
@@ -58,6 +72,7 @@ export const Home = () => {
         </div>
 
         <div id="Wrapper" css={css`
+          background: var(--mywhite);
           position: absolute;
           top: 100vh;
           left: 0;
@@ -66,15 +81,15 @@ export const Home = () => {
           /* margin-left: 10px;
           margin-right: 10px; */
         `}>
-          <h1 css={css`
-            padding: 24px;
+          <h2 css={css`
+            font-size: 32px;
+            padding: 18px;
             margin: 0;
-            color: var(--mybeige);
+            color: var(--mywhite);
             background: var(--blueblack);
             font-family: 'Zen Maru Gothic';
-          `}>Content</h1>
+          `}>Content</h2>
           <ul css={css`
-            margin-top: 48px;
             margin-left: 10px;
             margin-right: 10px;
             padding: 0;
@@ -82,34 +97,12 @@ export const Home = () => {
             display: flex;
             font-family: 'Zen Maru Gothic', serif;
             color: var(--blueblack);
-            @media screen and (max-width: 700px) {
+            @media screen and (max-width: 520px) {
               flex-flow: column;
             }
           `}>
-            <li css={css`
-              flex: 1;
-              margin: 10px;
-            `}>
-              <img onClick={() => navigate('achivement')} css={css`
-                &:hover {
-                  opacity: 80%;
-                }  
-                width: 100%;
-              `} src={tongking} alt="" />
-              <h2>成果物</h2>
-            </li>
-            <li css={css`
-              flex: 1;
-              margin: 10px;
-            `}>
-              <img onClick={() => navigate('career')}css={css`
-                &:hover {
-                  opacity: 80%;
-                }  
-                width: 100%;
-              `} src={keireki} alt="" />
-              <h2>経歴・資格</h2>
-            </li>
+            <Content {...achivement} />
+            <Content {...career} />
           </ul>
         </div>
       </div>
