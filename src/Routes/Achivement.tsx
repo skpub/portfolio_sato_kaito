@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react'
 import { AchivementContent, Commit } from "./AchivementContent"
+import { ScrollRestoration } from 'react-router-dom'
 import kurumi from '/img/kurumi-proxy.png'
 import dirbkup from '/img/DIrBackup.png'
 import glkadai from '/img/gl_kadai.png'
@@ -47,6 +48,7 @@ export const Achivement = () => {
       <AchivementContent {...kurumi_proxy}/>
       <AchivementContent {...DIrBackup}/>
       <AchivementContent {...gl_kadai}/>
+      <ScrollRestoration />
     </div>
   )
 }
