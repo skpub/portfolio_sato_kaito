@@ -1,8 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react'
 import { css } from '@emotion/react'
 import { FaGithub, FaTwitter, FaFacebook } from 'react-icons/fa'
-import { getAge, Birthday } from './birthday.ts'
 import { useNavigate } from 'react-router-dom'
 
 export type HdrTitle = {

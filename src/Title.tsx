@@ -1,9 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react'
 import { css } from '@emotion/react'
 import { getAge, Birthday} from './birthday'
 
-const Title = () => {
+export const Title = () => {
     const birthday: Birthday = {
       year: 2002,
       month: 2,

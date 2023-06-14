@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { useState, useEffect, useCallback } from 'react'
 import { css } from '@emotion/react'
-import { ScrollRestoration, useNavigate } from 'react-router-dom'
 import './App.css'
 import { Header, HdrTitle } from './Header'
 import { Content, ContentProps } from './Content'
@@ -11,7 +10,6 @@ import keireki from '/img/keireki2.jpg'
 
 export const Home = () => {
   const [scrollPoint, setScrollPoint] = useState<number>(0)
-  const [current, setCurrent] = useState<number>(0)
 
   const handleScrolling = useCallback(() => {
     if (window.pageYOffset >= 0) {
@@ -24,12 +22,6 @@ export const Home = () => {
   }, [handleScrolling])
 
   const closeHeader = css``
-
-  const Title = css`
-    padding: 100%;  
-  `
-
-  const navigate = useNavigate()
 
   const achivement: ContentProps = {
     title: "成果物",
