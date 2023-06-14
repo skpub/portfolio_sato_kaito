@@ -88,7 +88,7 @@ export const Home = () => {
             color: var(--mywhite);
             background: var(--blueblack);
             font-family: 'Zen Maru Gothic';
-          `}>Content</h2>
+          `}>Contents</h2>
           <ul css={css`
             margin-left: 10px;
             margin-right: 10px;
