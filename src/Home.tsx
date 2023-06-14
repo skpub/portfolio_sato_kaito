@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { css } from '@emotion/react'
 import { ScrollRestoration, useNavigate } from 'react-router-dom'
 import './App.css'
-import Header from './Header'
+import { Header, HdrTitle } from './Header'
 import { Content, ContentProps } from './Content'
 import kaito from '/img/stand.png'
 import tongking from '/img/TONGKING2.png'
@@ -43,6 +43,11 @@ export const Home = () => {
     link: "/career"
   }
 
+  const hdr_title: HdrTitle = {
+    title: "佐藤 海音 / Sato Kaito",
+    link: "",
+  }
+
   return (
     <>
       <div id="BackGround" css={css`
@@ -54,6 +59,7 @@ export const Home = () => {
         /* background: linear-gradient(0deg, var(--blueblack), 2%, var(--mybeige)); */
       `}>
         <img css={css`
+          padding-top: 24px;
           width: 100vw;
           height: 100vh;
           /* filter: brightness(130%); */
@@ -68,7 +74,7 @@ export const Home = () => {
         `} src={kaito} alt="" />
 
         <div css={closeHeader}>
-          <Header />
+          <Header {...hdr_title} />
         </div>
 
         <div id="Wrapper" css={css`

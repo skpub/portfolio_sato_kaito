@@ -3,10 +3,18 @@ import React from 'react'
 import { css } from '@emotion/react'
 import { FaGithub, FaTwitter, FaFacebook } from 'react-icons/fa'
 import { getAge, Birthday } from './birthday.ts'
+import { useNavigate } from 'react-router-dom'
 
-const Header = () => {
+export type HdrTitle = {
+  title: string,
+  link: string,
+}
+
+export const Header = (props: HdrTitle) => {
+  const navigate = useNavigate()
   return (
     <><div css={css`
+      background: var(--mywhite);
       display: flex;
       /* position: absolute; */
       z-index: 1;
@@ -19,20 +27,20 @@ const Header = () => {
       width: 100vw;
     `}>
       <div id="Header-left" css={css`
-        font-family: 'Shippori Mincho', serif;
-        p {
-        font-size: 24px;
-          margin: 10px;
+      `}>
+        <p css={css`
+          font-family: 'Shippori Mincho', serif;
+          font-size: 24px;
+          margin: 5px;
           padding-left: 30px;
-        }
-        @media screen and (max-width: 520px) {
-          p {
+          @media screen and (max-width: 520px) {
             padding-left: 15px;
             font-size: 4vw;
           }
-        }
-      `}>
-        <p>佐藤 海音 / Sato Kaito</p>
+          &:hover {
+            opacity: 80%;
+          }
+        `} onClick={() => navigate(props.link)}>{props.title}</p>
       </div>
       <div id="Header-right" css={css`
         display: flex;

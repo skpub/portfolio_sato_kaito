@@ -11,7 +11,6 @@ export type Record = {
 export const CareerContent = (props: Record) => {
   return (
     <div css={css`
-      background: var(--mywhite);
       padding: 24px;
       text-align: left;
     `}>

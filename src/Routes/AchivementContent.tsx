@@ -11,7 +11,12 @@ export type Commit = {
 export const AchivementContent = (props: Commit) => {
   return (
     <div css={css`
-        color: var(--blueblack);
+      flex-direction: row;
+      width: 50%;
+      color: var(--blueblack);
+      @media screen and (max-width: 1280px) {
+        width: 100%;
+      }
     `}>
       <div css={css`
         display: flex;
