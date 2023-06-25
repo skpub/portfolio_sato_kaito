@@ -7,6 +7,9 @@ html {
 #root {
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
 }
 
 body {

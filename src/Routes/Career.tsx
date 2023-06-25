@@ -44,6 +44,7 @@ export const Career = () => {
   return (
     <>
     <div css={css`
+      flex-grow: 1;
       background: var(--mywhite);
       padding: 24px;
     `}>

@@ -45,6 +45,7 @@ export const Achivement = () => {
     <>
     <div css={css`
       background: var(--mywhite);
+      flex-grow: 1;
     `}>
       <Header {...hdr_title} />
       <div css={css`

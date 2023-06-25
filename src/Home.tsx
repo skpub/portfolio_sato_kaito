@@ -8,6 +8,7 @@ import { Content, ContentProps } from './Content'
 import kaito from '/img/stand.png'
 import tongking from '/img/TONGKING2.png'
 import keireki from '/img/keireki2.jpg'
+import souda from '/img/souda.png'
 
 export const Home = () => {
   const [scrollPoint, setScrollPoint] = useState<number>(0)
@@ -58,6 +59,24 @@ export const Home = () => {
           }
           object-position: 0px -${(window.innerWidth * 2 - window.innerHeight) * (scrollPoint / window.innerHeight)}px;
         `} src={kaito} alt="" />
+        <div css={css`
+          position: absolute;
+          top: 0;
+          padding-top: 10vh;
+          padding-right: 10vw;
+          right: 0;
+          height: 80vh;
+          width: 50vw;
+        `}>
+          <img src={souda} alt="" css={css`
+            
+            filter: drop-shadow(3px 3px 0px var(--mybeige));
+            object-position: right top;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+          `}/>
+        </div>
       </div>
 
       <Header {...hdr_title} />
