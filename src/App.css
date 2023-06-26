@@ -1,13 +1,16 @@
-#root {
+html {
   --mybeige: #ffeabf;
   --mywhite: #fdfdf7;
   --blueblack: #303045;
+}
+
+#root {
   margin: 0 auto;
   text-align: center;
 }
 
 body {
-  background-color: var(--mywhite);
+  background: var(--mywhite);
 }
 /* body {
   width: 100%;

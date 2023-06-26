@@ -7,6 +7,7 @@ import dirbkup from '/img/DIrBackup.png'
 import glkadai from '/img/gl_kadai.png'
 import cts_img from '/img/cts.png'
 import { HdrTitle, Header } from '../Header'
+import { Footer } from '../Footer'
 
 export const Achivement = () => {
   const kurumi_proxy: Commit = {
@@ -41,6 +42,7 @@ export const Achivement = () => {
   }
 
   return (
+    <>
     <div css={css`
       background: var(--mywhite);
     `}>
@@ -66,5 +68,7 @@ export const Achivement = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   )
 }

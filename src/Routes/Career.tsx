@@ -3,6 +3,7 @@ import { css } from '@emotion/react'
 import { Record, CareerContent } from './CareerContent.tsx'
 import { ScrollRestoration } from 'react-router-dom'
 import { Header, HdrTitle } from '../Header.tsx'
+import { Footer } from '../Footer'
 
 export const Career = () => {
   const nitic: Record = {
@@ -41,6 +42,7 @@ export const Career = () => {
     link: "/",
   }
   return (
+    <>
     <div css={css`
       background: var(--mywhite);
       padding: 24px;
@@ -73,5 +75,7 @@ export const Career = () => {
         <ScrollRestoration />
       </div>
     </div>
+    <Footer />
+    </>
   )
 }

@@ -14,7 +14,6 @@ export const Header = (props: HdrTitle) => {
     <><div css={css`
       background: var(--mywhite);
       display: flex;
-      /* position: absolute; */
       z-index: 1;
       position: fixed;
       top: 0px;
@@ -45,12 +44,8 @@ export const Header = (props: HdrTitle) => {
         width: 200px;
         margin: 0 0 0 auto;
         font-size: 24px;
-        a {
+        * {
           margin: auto;
-          * {
-            padding: 0;
-            margin: 0;
-          }
           color: var(--blueblack);
         }
         @media screen and (max-width: 520px) {
@@ -60,20 +55,14 @@ export const Header = (props: HdrTitle) => {
           }
         }
       `}>
-        <a href="https://github.com/skpub" target="_blank" css={css`
-        `}>
-          <FaGithub css={css`
-          `} />
+        <a href="https://github.com/skpub" target="_blank">
+          <FaGithub />
         </a>
-        <a href="https://twitter.com/OMGR_dearinsu" target="_blank" css={css`
-        `}>
-          <FaTwitter css={css`
-          `} />
+        <a href="https://twitter.com/OMGR_dearinsu" target="_blank">
+          <FaTwitter />
         </a>
-        <a href="https://www.facebook.com/profile.php?id=100085236288723" target="_blank" css={css`display: block;
-        `}>
-          <FaFacebook css={css`
-          `} />
+        <a href="https://www.facebook.com/profile.php?id=100085236288723" target="_blank">
+          <FaFacebook />
         </a>
       </div>
     </div>
