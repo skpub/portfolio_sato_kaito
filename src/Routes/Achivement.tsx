@@ -6,6 +6,7 @@ import kurumi from '/img/kurumi-proxy.png'
 import dirbkup from '/img/DIrBackup.png'
 import glkadai from '/img/gl_kadai.png'
 import cts_img from '/img/cts.png'
+import this_img from '/img/this.png'
 import { HdrTitle, Header } from '../Header'
 import { Footer } from '../Footer'
 
@@ -31,9 +32,16 @@ export const Achivement = () => {
 
   const cts: Commit = {
     title: "CalenderTaskScheduler",
-    description: "crontab の時間指定を受け取り、タスクを受け取り、指定通りにタスクを実行するライブラリ。crontab 使えば良くね？という話だ。なぜ作ったんだろう。地味に大変だったのでソースを読んでほしい。",
+    description: "crontabの時間指定を受け取り、タスクを受け取り、指定通りにタスクを実行するライブラリ。crontab使えば良くね？という話だ。なぜ作ったんだろう。地味に大変だったのでソースを読んでほしい。",
     img_link: cts_img,
     gh_link: "https://github.com/skpub/CalenderTaskScheduler"
+  }
+
+  const this_pf: Commit = {
+    title: "このポートフォリオ",
+    description: "Viteを使ってReactで書かれている。react-router-domを使ったSPA.",
+    img_link: this_img,
+    gh_link: "https://github.com/skpub/portfolio_sato_kaito"
   }
 
   const hdr_title: HdrTitle = {
@@ -65,6 +73,7 @@ export const Achivement = () => {
           <AchivementContent {...DIrBackup}/>
           <AchivementContent {...gl_kadai}/>
           <AchivementContent {...cts}/>
+          <AchivementContent {...this_pf} />
           <ScrollRestoration />
         </div>
       </div>

@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { Routes, Route } from 'react-router-dom'
 import { Home } from './Home'
 import { Achivement } from './Routes/Achivement'

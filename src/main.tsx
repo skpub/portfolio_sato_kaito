@@ -4,11 +4,12 @@ import './index.css'
 import { Home } from "./Home"
 import { Achivement } from './Routes/Achivement.tsx'
 import { Career } from './Routes/Career.tsx'
+import { Ability } from './Routes/Ability.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <Home />
   },
   {
     path: '/achivement',
@@ -16,8 +17,12 @@ const router = createBrowserRouter([
   },
   {
     path: '/career',
-    element: <Career />
+    element: <Career />,
   },
+  {
+    path: '/ability',
+    element: <Ability />,
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

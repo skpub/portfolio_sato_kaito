@@ -8,7 +8,8 @@ import { Content, ContentProps } from './Content'
 import kaito from '/img/stand.png'
 import tongking from '/img/TONGKING2.png'
 import keireki from '/img/keireki2.jpg'
-import souda from '/img/souda.png'
+import souda from '/img/souda.svg'
+import router from '/img/router.jpg'
 
 export const Home = () => {
   const [scrollPoint, setScrollPoint] = useState<number>(0)
@@ -33,6 +34,12 @@ export const Home = () => {
     title: "経歴・資格",
     img: keireki,
     link: "/career"
+  }
+  
+  const ability: ContentProps = {
+    title: "できること",
+    img: router,
+    link: "/ability"
   }
 
   const hdr_title: HdrTitle = {
@@ -106,6 +113,7 @@ export const Home = () => {
         `}>
           <Content {...achivement} />
           <Content {...career} />
+          <Content {...ability} />
         </ul>
       </div>
       <Footer />

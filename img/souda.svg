@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1246.19 1995.01">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #303045;
+        font-family: YuMincho-Regular, 'Yu Mincho';
+        font-size: 386px;
+        glyph-orientation-vertical: 0deg;
+        text-orientation: upright;
+        writing-mode: tb;
+      }
+
+      .cls-2 {
+        letter-spacing: .03em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.5em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(1053.19 0)"><tspan x="0" y="0">佐藤海</tspan><tspan class="cls-4" x="0" y="1158">音</tspan><tspan class="cls-2" x="0" y="1545.89">を</tspan><tspan class="cls-3" x="-488" y="0">雇</tspan><tspan class="cls-7" x="-488" y="370.17">お</tspan><tspan class="cls-5" x="-488" y="754.66">う</tspan><tspan class="cls-6" x="-488" y="1098.06">。</tspan></text>
+</svg>
